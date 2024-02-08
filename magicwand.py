@@ -71,7 +71,7 @@ except BaseException:
 print("Initializing point tracking")
 
 # get the size of the screen
-width = 800
+width = 640
 height = 480
 
 # Parameters
@@ -85,6 +85,9 @@ active = False
 
 # Start capturing
 cap = cv2.VideoCapture(0)
+
+#cap.set(cv2.CAP_PROP_FRAME_WIDTH, width)
+#cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
 p0 = None  # Points holder
 # Current number of frames without points. (After finding a few.)
 frameMissingPoints = 0
