@@ -218,8 +218,8 @@ def ProcessImage():
 
     frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     frame_gray = cv2.resize(frame_gray,
-                            (5 * (xEnd - xStart),
-                             5 * (yEnd - yStart)),
+                            (2 * (xEnd - xStart),
+                             2 * (yEnd - yStart)),
                             interpolation=cv2.INTER_CUBIC)
     th, frame_gray = cv2.threshold(frame_gray, 180, 255, cv2.THRESH_BINARY)
     frame_gray = cv2.dilate(frame_gray, kernel, iterations=3)
