@@ -10,7 +10,7 @@ See the whole build, tips, tricks and comments at: https://bloggerbrothers.com/2
 - Run through the instructions found in: steps_taken.txt
 - Download the git repository
 - run:
-  - python magic_wand.py
+  - python magicwand.py
 
 ## To start the support webpage:
 - cd nodeservice
