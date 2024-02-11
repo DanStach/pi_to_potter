@@ -1,0 +1,15 @@
+
+
+sudo pip3 install --upgrade pip
+pip3 install numpy
+pip3 install imutils
+pip3 install opencv-python   
+pip3 install bluepy
+
+
+cd ~
+
+python3
+import cv2
+cv2.__version__
+
