@@ -71,7 +71,7 @@ except BaseException:
 print("Initializing point tracking")
 
 # get the size of the screen
-width = 800
+width = 640
 height = 480
 
 # Parameters
@@ -85,6 +85,9 @@ active = False
 
 # Start capturing
 cap = cv2.VideoCapture(0)
+
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, width)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
 p0 = None  # Points holder
 # Current number of frames without points. (After finding a few.)
 frameMissingPoints = 0
@@ -215,8 +218,8 @@ def ProcessImage():
 
     frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     frame_gray = cv2.resize(frame_gray,
-                            (5 * (xEnd - xStart),
-                             5 * (yEnd - yStart)),
+                            (2 * (xEnd - xStart),
+                             2 * (yEnd - yStart)),
                             interpolation=cv2.INTER_CUBIC)
     th, frame_gray = cv2.threshold(frame_gray, 180, 255, cv2.THRESH_BINARY)
     frame_gray = cv2.dilate(frame_gray, kernel, iterations=3)
