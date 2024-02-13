@@ -26,12 +26,14 @@ class Spells:
         if (spell == "center"):
             music.play_mp3(f'{self.args.home}/pi_to_potter/music/reys.mp3')
         elif (spell == "circle"):
-            music.play_mp3(f'{self.args.home}/pi_to_potter/music/audio.mp3')
+            ##music.play_mp3(f'{self.args.home}/pi_to_potter/music/audio.mp3')
+            music.playAudioFile(f'{self.args.home}/pi_to_potter/music/audio.mp3')
+
         elif (spell == "eight"):
             print("Togging digital logger.")
             music.play_mp3(f'{self.args.home}/pi_to_potter/music/tinkle.mp3')
             ##digitalLogger.toggle()
-            ##None
+            None
         elif (spell == "left"):
             music.play_mp3(
                 f'{self.args.home}/pi_to_potter/music/spellshot.mp3')
@@ -62,5 +64,5 @@ class Spells:
             ##print("Toggling 'other' pin.")
             print("Playing audio file...")
             music.play_mp3(f'{self.args.home}/pi_to_potter/music/zoo.mp3')
-            ##None
+            None
         print("CAST: %s" % spell)

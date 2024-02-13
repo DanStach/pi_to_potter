@@ -40,5 +40,12 @@ def stop_wav():
 
 
 def play_mp3(file_path):
-    os.system('killall mpg321')
-    os.system(f'mpg321 {file_path} &')
+    os.system('killall mplayer')
+    os.system(f'mplayer {file_path} &')
+
+
+def playAudioFile(mp3_file):
+    # play file
+    subprocess.Popen(["mplayer", mp3_file, "-ss", "0"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+    
