@@ -30,33 +30,37 @@ class Spells:
         elif (spell == "eight"):
             print("Togging digital logger.")
             music.play_mp3(f'{self.args.home}/pi_to_potter/music/tinkle.mp3')
-            digitalLogger.toggle()
-            None
+            ##digitalLogger.toggle()
+            ##None
         elif (spell == "left"):
-            print("Toggling magic crystal.")
-            if self.args.use_ble:
-                ble.toggleBLE()
-        elif (spell == "square"):
-            None
-        elif (spell == "swish"):
-            None
-        elif (spell == "tee"):
-            print("Togging bubbles.")
-            bubblesSwitch = not bubblesSwitch
             music.play_mp3(
                 f'{self.args.home}/pi_to_potter/music/spellshot.mp3')
-            if (bubblesSwitch):
-                os.system(f'{self.args.home}/pi_to_potter/bubbleson.sh')
-            else:
-                os.system(f'{self.args.home}/pi_to_potter/bubblesoff.sh')
-            None
+            ##print("Toggling magic crystal.")
+            ##if self.args.use_ble:
+            ##    ble.toggleBLE()
+        elif (spell == "square"):
+            music.play_mp3(
+                f'{self.args.home}/pi_to_potter/music/spellshot.mp3')
+        elif (spell == "swish"):
+            music.play_mp3(
+                f'{self.args.home}/pi_to_potter/music/spellshot.mp3')
+        elif (spell == "tee"):
+            ##print("Togging bubbles.")
+            ##bubblesSwitch = not bubblesSwitch
+            music.play_mp3(
+                f'{self.args.home}/pi_to_potter/music/spellshot.mp3')
+            ##if (bubblesSwitch):
+            ##    os.system(f'{self.args.home}/pi_to_potter/bubbleson.sh')
+            ##else:
+            ##    os.system(f'{self.args.home}/pi_to_potter/bubblesoff.sh')
+            ##None
         elif (spell == "triangle"):
             print("Toggling outlet.")
-            print("Playing audio file...")
+            ##print("Playing audio file...")
             music.play_mp3(f'{self.args.home}/pi_to_potter/music/wonder.mp3')
         elif (spell == "zee"):
-            print("Toggling 'other' pin.")
+            ##print("Toggling 'other' pin.")
             print("Playing audio file...")
             music.play_mp3(f'{self.args.home}/pi_to_potter/music/zoo.mp3')
-            None
+            ##None
         print("CAST: %s" % spell)
